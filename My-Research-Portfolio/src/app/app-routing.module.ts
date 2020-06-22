@@ -1,8 +1,16 @@
+import { PublicationsComponent } from './publications/publications.component';
+import { UndergradDocsComponent } from './undergrad-docs/undergrad-docs.component';
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'undergradDocs', component: UndergradDocsComponent },
+  { path: 'publications', component: PublicationsComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

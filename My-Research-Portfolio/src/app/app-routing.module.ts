@@ -3,6 +3,27 @@ import { UndergradDocsComponent } from './undergrad-docs/undergrad-docs.componen
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {
+  ButtonsModule,
+  CardsModule,
+  CarouselModule,
+  CheckboxModule,
+  CollapseModule,
+  NavbarModule,
+  WavesModule,
+  ModalModule,
+  TooltipModule,
+  PopoverModule,
+  ModalDirective,
+  TableModule,
+  DropdownModule,
+  BsDropdownToggleDirective,
+  BsDropdownDirective,
+  InputsModule,
+  IconsModule,
+  ChartsModule,
+} from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -14,6 +35,25 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [
+    RouterModule,
+    ButtonsModule,
+    CardsModule,
+    CarouselModule,
+    WavesModule,
+    CheckboxModule,
+    CollapseModule,
+    NavbarModule,
+    FormsModule,
+    IconsModule,
+    NavbarModule,
+    TooltipModule,
+    PopoverModule,
+    TableModule,
+    BsDropdownToggleDirective,
+    BsDropdownDirective,
+    InputsModule,
+    ModalModule
+  ]
 })
 export class AppRoutingModule { }

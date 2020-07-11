@@ -50,8 +50,6 @@ const routes: Routes = [
     TooltipModule,
     PopoverModule,
     TableModule,
-    BsDropdownToggleDirective,
-    BsDropdownDirective,
     InputsModule,
     ModalModule
   ]

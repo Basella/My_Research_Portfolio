@@ -1,0 +1,112 @@
+<div class="mainDiv">
+  <div class="fixed-margin-btm mainNav">
+    <!--Navbar-->
+    <mdb-navbar
+      SideClass="navbar navbar-expand-lg navbar-dark py-3 px-lg-5 px-md-5 blue-grey darken-4 fixed-top fixed-margin-btm"
+      [containerInside]="false" mdbStickyHeader
+    >
+      <!-- Navbar brand -->
+      <mdb-navbar-brand
+        ><a class="navbar-brand font-25px pl-lg-4" style="font-weight: bold;" [routerLink]="'/'"
+          >Research Portfolio</a
+        ></mdb-navbar-brand
+      >
+      <!-- Collapsible content -->
+      <links>
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>About Me</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link waves-light" mdbWavesEffect>Undergraduate Documents<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>Curriculum Vitae</a>
+          </li>
+
+        </ul>
+        <!-- Links -->
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto text-uppercase">
+          <li>
+            <div class="btn-group mr-5" mdbDropdown>
+              <a
+                mdbDropdownToggle
+                type="button"
+                mdbBtn
+                class="dropdown-toggle waves-light"
+                mdbWavesEffect
+              >
+                <!-- <img
+                  src="../../../assets/image/avatar.png"
+                  alt="Avatar"
+                  class="md-avatar rounded-circle"
+                /> -->
+                <!-- <mdb-icon fas icon="user-circle"></mdb-icon> -->
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" class="img-fluid rounded-circle z-depth-0" style="width: 30px;">
+              </a>
+
+              <!-- <div class="dropdown-menu dropdown-primary mt-2 px-1">
+                <a class="dropdown-item" [routerLink]="'/reservation-history'"
+                  >Reservation History</a
+                >
+                <a class="dropdown-item" [routerLink]="'/user-profile'">Profile</a>
+                <a
+                  class="dropdown-item"
+                  [routerLink]="'/login'"
+                  >Logout</a
+                >
+              </div> -->
+            </div>
+          </li>
+        </ul>
+        <!-- Links -->
+      </links>
+      <!-- Collapsible content -->
+    </mdb-navbar>
+    <!--/.Navbar-->
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <div class="footer-fix-btm">
+    <!-- Footer -->
+    <footer class="page-footer blue-grey darken-4 fixed-bottom">
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left py-5">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mx-auto">
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Emmanuela Mmasichukwu Ezeakacha</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">About Me</a>
+              </li>
+              <li>
+                <a href="#!">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 text-white">
+        Copyright © {{ currentYear }} Emmanuela, Inc. All rights reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+</div>
+

@@ -1,22 +1,21 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { PublicationsComponent } from './publications/publications.component';
-import { UndergradDocsComponent } from './undergrad-docs/undergrad-docs.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    PublicationsComponent,
-    UndergradDocsComponent
+    AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

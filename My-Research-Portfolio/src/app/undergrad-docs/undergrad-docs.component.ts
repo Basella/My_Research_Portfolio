@@ -17,10 +17,12 @@ statement: boolean;
     console.log('hi')
     console.log('transcript is: ', this.transcript)
     this.transcript = true;
+    this.statement = false;
   }
 
   isStatement() {
     this.statement = true;
+    this.transcript = false;
   }
 
 }

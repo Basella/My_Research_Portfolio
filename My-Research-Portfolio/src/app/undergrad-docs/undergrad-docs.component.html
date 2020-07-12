@@ -1,5 +1,5 @@
 <div class="undergradMenu">
-  <div>
+  <div class="sideMenu">
     <div (click)="isTranscript()">
       <p>
         Transcript
@@ -11,31 +11,16 @@
         Statement of Result (Certificate)
       </p>
     </div>
+  </div>
 
-    <div>
-      <button (click)="isTranscript()">Test</button>
+  <div class="bdyDiv">
+    <div *ngIf="transcript">
+      <embed src="../../assets/docs/EzeakachaEmmanuelaUniversityTranscript.pdf" width="1200px" height="1000px" />
     </div>
 
+    <div *ngIf="statement">
+      <embed src="../../assets/docs/EzeakachaEmmanuelaStatementofResult.pdf" width="1200px" height="1000px" />
+    </div>
   </div>
 
-  <div *ngIf="transcript">
-    <p>Transcript here</p>
-    <p>Transcript here</p>
-    <p>Transcript here</p>
-    <p>Transcript here</p>
-    <p>Transcript here</p>
-    <p>Transcript here</p>
-    <p>Transcript here</p>
-    <p>Transcript here</p>
-  </div>
-
-  <div *ngIf="statement">
-    <p>Statement of Result here</p>
-    <p>Statement of Result here</p>
-    <p>Statement of Result here</p>
-    <p>Statement of Result here</p>
-    <p>Statement of Result here</p>
-    <p>Statement of Result here</p>
-    <p>Statement of Result here</p>
-  </div>
 </div>

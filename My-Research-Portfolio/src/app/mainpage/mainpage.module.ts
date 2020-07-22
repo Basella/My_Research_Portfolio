@@ -1,3 +1,4 @@
+import { ReferencesComponent } from './../references/references.component';
 import { PublicationsComponent } from './../publications/publications.component';
 import { UndergradDocsComponent } from './../undergrad-docs/undergrad-docs.component';
 import { RouterModule } from '@angular/router';
@@ -30,7 +31,8 @@ import { AboutComponent } from '../about/about.component';
     MainpageComponent,
     UndergradDocsComponent,
     PublicationsComponent,
-    AboutComponent
+    AboutComponent,
+    ReferencesComponent
   ],
   imports: [
     CommonModule,

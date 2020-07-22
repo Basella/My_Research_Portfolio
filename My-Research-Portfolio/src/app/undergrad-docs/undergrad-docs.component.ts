@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataHolderService } from '../services/data-holder.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-undergrad-docs',
@@ -6,23 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./undergrad-docs.component.scss']
 })
 export class UndergradDocsComponent implements OnInit {
-transcript: boolean;
-statement: boolean;
-  constructor() { }
 
-  ngOnInit() {
-  }
+  constructor(
+    public dataHolder: DataHolderService,
+    private router: Router,
+  ) { }
 
-  isTranscript() {
-    console.log('hi')
-    console.log('transcript is: ', this.transcript)
-    this.transcript = true;
-    this.statement = false;
-  }
-
-  isStatement() {
-    this.statement = true;
-    this.transcript = false;
-  }
-
+  ngOnInit() {}
 }

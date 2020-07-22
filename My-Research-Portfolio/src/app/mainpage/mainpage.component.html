@@ -1,97 +1,123 @@
 <div class="mainDiv">
-  <div class="fixed-margin-btm mainNav">
-    <!--Navbar-->
-    <mdb-navbar
-      SideClass="navbar navbar-expand-lg navbar-dark py-3 px-lg-5 px-md-5 blue-grey darken-4 fixed-top fixed-margin-btm"
-      [containerInside]="false" mdbStickyHeader
-    >
-      <!-- Navbar brand -->
-      <mdb-navbar-brand
-        ><a class="navbar-brand font-25px pl-lg-4" style="font-weight: bold;" [routerLink]="'/'"
-          >Research Portfolio</a
-        ></mdb-navbar-brand
-      >
-      <!-- Collapsible content -->
-      <links>
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link waves-light" mdbWavesEffect>About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-light" mdbWavesEffect>Undergraduate Documents<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-light" mdbWavesEffect>Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-light" mdbWavesEffect>Curriculum Vitae</a>
-          </li>
-
-        </ul>
-        <!-- Links -->
-
-        <!-- Links -->
-        <ul class="navbar-nav ml-auto text-uppercase">
-          <li>
-            <div class="btn-group mr-5">
-              <a
-                type="button"
-                mdbBtn
-                class="waves-light"
-                mdbWavesEffect
-              >
-                <img
-                  src="../../assets/images/IMG_20180906_090627.jpg"
-                  alt="Avatar"
-                  class="md-avatar rounded-circle"
-                />
-              </a>
-            </div>
-          </li>
-        </ul>
-        <!-- Links -->
-      </links>
-      <!-- Collapsible content -->
-    </mdb-navbar>
-    <!--/.Navbar-->
-  </div>
-
-  <router-outlet></router-outlet>
-
-  <div class="footer-fix-btm">
-    <!-- Footer -->
-    <footer class="page-footer blue-grey darken-4">
-      <!-- Footer Links -->
-      <div class="container text-center text-md-left py-5">
-        <!-- Grid row -->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-6 mx-auto">
-            <!-- Links -->
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Emmanuela Mmasichukwu Ezeakacha</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">About Me</a>
-              </li>
-              <li>
-                <a href="#!">Contact Me</a>
-              </li>
-            </ul>
-          </div>
+  <div class="mainSubDiv">
+    <div class="divBfrNav">
+      <div class="hDiv">
+        <div class="firstDiv">
+          <mdb-navbar-brand
+            ><a class="navbar-brand font-25px brandStyle" [routerLink]="'/'"
+              >Research Portfolio</a
+            ></mdb-navbar-brand
+          >
         </div>
-        <!-- Grid row -->
-      </div>
-      <!-- Footer Links -->
 
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3 text-white">
-        Copyright © {{ currentYear }} Emmanuela, Inc. All rights reserved
+        <!-- <div>
+          <img src="../../assets/images/poultry.jpg" class="poultryDiv">
+        </div> -->
       </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+
+    </div>
+
+    <!-- full navbar -->
+    <div class="fixed-margin-btm mainNav">
+      <!--Navbar-->
+      <mdb-navbar
+        SideClass="navbar navbar-expand-lg navbar-dark py-3 px-lg-5 px-md-5 purple"
+        [containerInside]="false" class="navCon"
+      >
+        <!-- Collapsible content -->
+        <links>
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto ulClass">
+            <li class="nav-item" id="activeItms" (click)="aboutClick()" [ngClass]="{active: aboutChckd}">
+              <a class="nav-link waves-light" href="/home" mdbWavesEffect>Home</a>
+            </li>
+            <li class="nav-item" id="activeItms" (click)="undergradDocsClick()" [ngClass]="{active: undergradDocsChckd}">
+              <a class="nav-link waves-light" href="/docs" mdbWavesEffect>Undergraduate Documents</a>
+            </li>
+            <li class="nav-item" id="activeItms" (click)="pubClick()" [ngClass]="{active: pubChckd}">
+              <a class="nav-link waves-light" href="/publications" mdbWavesEffect>Publications</a>
+            </li>
+            <li class="nav-item" id="activeItms" (click)="cvClick()" [ngClass]="{active: cvChckd}">
+              <a class="nav-link waves-light" href="/resume" mdbWavesEffect>Resume</a>
+            </li>
+            <li class="nav-item" id="activeItms" (click)="cvClick()" [ngClass]="{active: cvChckd}">
+              <a class="nav-link waves-light" href="/references" mdbWavesEffect>References</a>
+            </li>
+
+          </ul>
+        </links>
+        <!-- Collapsible content -->
+      </mdb-navbar>
+      <!--/.Navbar-->
+    </div>
+
+
+    <router-outlet></router-outlet>
+
+    <hr class="hLine">
+
+    <div class="foot">
+      <div class="footBdy">
+        <p class="emaill"><strong>Email: </strong><span>emmanuelaezeakacha@gmail.com</span></p>
+        <p class="phonee"><strong>Phone: </strong><span>+2347032740011</span></p>
+      </div>
+
+      <div>
+        <div class="hdrRpt">
+          <p [routerLink]="'/about'" class="footW">Home</p>
+          <div class="vl"></div>
+          <p [routerLink]="'/docs'" class="footW">Undergraduate Documents</p>
+          <div class="vl"></div>
+          <p [routerLink]="'/pub'" class="footW">Publications</p>
+          <div class="vl"></div>
+          <p [routerLink]="'/cv'" class="footCV">Curriculum Vitae</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="hdrRpt">
+          <p class="footWr">Animal Science</p>
+          <div class="vl"></div>
+          <p class="footWr">Animal Nutrition</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="footer-fix-btm"> -->
+      <!-- Footer -->
+      <!-- <footer class="page-footer purple"> -->
+        <!-- Footer Links -->
+        <!-- <div class="container text-center text-md-left py-5"> -->
+          <!-- Grid row -->
+          <!-- <div class="row"> -->
+            <!-- Grid column -->
+            <!-- <div class="col-md-6 mx-auto text-center"> -->
+              <!-- Links -->
+              <!-- <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Emmanuela Mmasichukwu Ezeakacha</h5> -->
+
+              <!-- <ul class="list-unstyled"> -->
+                <!-- <li> -->
+                  <!-- <a href="#!" class="footrWriteup">About Me</a> -->
+                <!-- </li> -->
+                <!-- <li> -->
+                  <!-- <a href="#!" class="footrWriteup">Contact Me</a> -->
+                <!-- </li> -->
+              <!-- </ul> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <!-- Grid row -->
+        <!-- </div> -->
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <!-- <div class="footer-copyright text-center py-3 text-white footrWriteup"> -->
+          <!-- Copyright © {{ currentYear }} Emmanuela, Inc. All rights reserved -->
+        <!-- </div> -->
+        <!-- Copyright -->
+      <!-- </footer> -->
+      <!-- Footer -->
+    <!-- </div> -->
   </div>
+
 </div>
 

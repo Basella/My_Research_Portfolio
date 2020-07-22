@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DataHolderService } from '../services/data-holder.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dataHolder: DataHolderService
+  ) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

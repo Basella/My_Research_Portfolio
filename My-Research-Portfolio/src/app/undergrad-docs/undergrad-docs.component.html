@@ -1,25 +1,70 @@
 <div class="undergradMenu">
-  <div class="sideMenu">
-    <div (click)="isTranscript()">
-      <p>
-        Transcript
-      </p>
-    </div>
-
-    <div (click)="isStatement()">
-      <p>
-        Statement of Result (Certificate)
-      </p>
-    </div>
-  </div>
 
   <div class="bdyDiv">
-    <div *ngIf="transcript">
-      <embed src="../../assets/docs/EzeakachaEmmanuelaUniversityTranscript.pdf" width="1200px" height="1000px" />
+    <div class="summary">
+      <p class="summaryTitle">Summary of Qualifications</p>
+
+      <p class="summTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dolorum suscipit sed dolore sequi corrupti totam recusandae non ratione, ab autem at? Eos sit quam earum.
+        Illo magni ab omnis ut.</p>
     </div>
 
-    <div *ngIf="statement">
-      <embed src="../../assets/docs/EzeakachaEmmanuelaStatementofResult.pdf" width="1200px" height="1000px" />
+    <div class="documents">
+      <div>
+        <div class="">
+          <p class="docTitle">Documents</p>
+        </div>
+
+        <div class="tableDiv">
+          <table class="mb-0" mdbTable hover="true">
+            <!--Table body-->
+            <tbody>
+            <tr>
+              <th scope="row" class="th-lg tableIDFont"><strong>Transcript</strong></th>
+              <td class="">
+                <span>
+                  <a floating="true" target="_blank" href="../../assets/docs/EzeakachaEmmanuelaUniversityTranscript.pdf" class="viewShft">
+                    <button>View <i class="far fa-file-pdf"></i></button>
+                  </a>
+                  <a mdbBtn floating="true" href="../../assets/docs/EzeakachaEmmanuelaUniversityTranscript.pdf" class="downloadShft" download="EmmanuelaEzeakachaUniversityTranscript">
+                    <button>Download <i class="fas fa-download"></i></button>
+                  </a>
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" class="th-lg tableIDFont"><strong>Statement of Result (Certificate)</strong></th>
+              <td class="">
+                <span>
+                  <a floating="true" target="_blank" href="../../assets/docs/EzeakachaEmmanuelaStatementofResult.pdf" class="viewShft">
+                    <button>View <i class="far fa-file-pdf"></i></button>
+                  </a>
+                  <a mdbBtn floating="true" href="../../assets/docs/EzeakachaEmmanuelaStatementofResult.pdf" class="downloadShft" download="EmmanuelaEzeakachaUniversityStatementofResult">
+                    <button>Download <i class="fas fa-download"></i></button>
+                  </a>
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" class="th-lg tableIDFont"><strong>English Language Proficiency Certificate</strong></th>
+              <td class="">
+                <span>
+                  <a floating="true" target="_blank" href="../../assets/docs/EzeakachaEmmanuelaEnglishLanguageProficiencyCertificate.pdf" class="viewShft">
+                    <button>View <i class="far fa-file-pdf"></i></button>
+                  </a>
+                  <a mdbBtn floating="true" href="../../assets/docs/EzeakachaEmmanuelaEnglishLanguageProficiencyCertificate.pdf" class="downloadShft" download="EmmanuelaEzeakachaEnglishProficiency">
+                    <button>Download <i class="fas fa-download"></i></button>
+                  </a>
+                </span>
+              </td>
+            </tr>
+            </tbody>
+            <!--Table body-->
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 

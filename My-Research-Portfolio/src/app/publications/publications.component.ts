@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataHolderService } from '../services/data-holder.service';
 
 @Component({
   selector: 'app-publications',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicationsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dataHolder: DataHolderService
+  ) { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

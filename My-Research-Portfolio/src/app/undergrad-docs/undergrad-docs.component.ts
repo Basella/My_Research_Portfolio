@@ -10,8 +10,7 @@ import { Router } from '@angular/router';
 export class UndergradDocsComponent implements OnInit {
 
   constructor(
-    public dataHolder: DataHolderService,
-    private router: Router,
+    public dataHolder: DataHolderService
   ) { }
 
   ngOnInit() {}

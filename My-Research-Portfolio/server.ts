@@ -15,8 +15,10 @@ const app = express();
 //     // res.sendFile(path.join(ROOTDIR, 'dist/My-Research-Portfolio/index.html'));
 // });
 
-// app.use(express.static(__dirname +  './dist/My-Research-Portfolio'));
+// app.set('views', './app/views');
+
 app.use(express.static(__dirname +  '/dist/My-Research-Portfolio'));
+
 // app.use('/docs', express.static('./src/app/undergrad-docs/undergrad-docs.component.html'));
 
 
